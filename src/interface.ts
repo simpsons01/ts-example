@@ -4,7 +4,6 @@ interface human {
   name: string
   gender?: string
   sayHi(): string
-  
 }
 
 // define a asia human 
