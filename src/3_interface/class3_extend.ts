@@ -1,5 +1,4 @@
 // 1. interface可以被拓展，使用extend關鍵字
-
 interface baseInterface {
   baseProperty: string
 }
@@ -13,8 +12,7 @@ const customExtendObj: extendInterface = {
   extendProperty: "i am extend property"
 }
 
-// 2. interface可以被class拓展
-
+// 2. interface可以被class拓展，接下來implements，只能是該類的subClass
 class baseClass {
   private priveateProperty: boolean
   constructor(val) {
