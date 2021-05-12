@@ -98,4 +98,4 @@ var Swiper = /** @class */ (function () {
     };
     return Swiper;
 }());
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=swiper.js.map

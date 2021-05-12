@@ -6,9 +6,8 @@
     "sourceMap": true,
     "noImplicitThis": true,
     "target": "es5",
-    "outDir": "dist",
+    "outDir": "./view/scripts",
     "module": "amd"
   },
   "include": ["src/4_example/*"],
-  "exclude": ["dist"]
 }

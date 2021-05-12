@@ -18,6 +18,30 @@
         justify-content: center;
         align-items: center;
       }
+      .swiper {
+        position: relative;
+      }
+      .forward, .back {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        color: black;
+        line-height: 30px;
+        text-align: center;
+        border: 0;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .forward {
+        right: 10px;
+      }
+      .back {
+        left: 10px;
+      }
       .swiper-item-container {
         position: relative;
         width: 500px;
@@ -36,14 +60,14 @@
         opacity: 0;
       }
       .swiper-item-container .swiper-item.show {
-        opacity:  1;
+        opacity: 1;
       }
       .swiper-item-container .swiper-item.enter-right,
       .swiper-item-container .swiper-item.enter-left,
       .swiper-item-container .swiper-item.leave-right,
       .swiper-item-container .swiper-item.leave-left {
         animation-fill-mode: forwards;
-        animation-duration: .3s;
+        animation-duration: 0.3s;
         animation-timing-function: ease;
       }
       .swiper-item-container .swiper-item.enter-right {
@@ -93,33 +117,29 @@
     </style>
   </head>
   <body>
-    <div>
-      <button class="forward">前進</button>
-      <button class="back">後退</button>
-    </div>
     <div class="swiper">
-      <div class="swiper-item-container">
-      </div>
+      <div class="swiper-item-container"></div>
+      <button class="forward"> > </button>
+      <button class="back"> < </button>
     </div>
-    <script src="./index.js"></script>
+    <script src="./scripts//swiper.js"></script>
     <script>
-      var el = document.querySelector(".swiper")
+      var el = document.querySelector(".swiper");
       var imageUrl = [
         { url: "https://picsum.photos/id/239/500/300" },
         { url: "https://picsum.photos/id/238/500/300" },
-        { url: "https://picsum.photos/id/240/500/300" }
-      ]
+        { url: "https://picsum.photos/id/240/500/300" },
+      ];
       var swiper = new Swiper({
         el: el,
-        imagesList: imageUrl
-      }) 
-      document.querySelector(".forward").addEventListener("click", function() {
-        swiper.updateCurrentPage(swiper.currentPage + 1)
-      })
-      document.querySelector(".back").addEventListener("click", function() {
-        swiper.updateCurrentPage(swiper.currentPage - 1)
-      })
+        imagesList: imageUrl,
+      });
+      document.querySelector(".forward").addEventListener("click", function () {
+        swiper.updateCurrentPage(swiper.currentPage + 1);
+      });
+      document.querySelector(".back").addEventListener("click", function () {
+        swiper.updateCurrentPage(swiper.currentPage - 1);
+      });
     </script>
-   
   </body>
 </html>
