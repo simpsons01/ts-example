@@ -37,9 +37,9 @@ interface SwiperItemContract {
 }
 
 class SwiperItem implements SwiperItemContract {
-  el: HTMLElement
-  image: imagePayload
-  index: number
+  public el: HTMLElement
+  public image: imagePayload
+  public index: number
   constructor(options: { image: imagePayload, index: number }) {
     this.image = options.image
     this.index = options.index
