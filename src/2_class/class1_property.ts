@@ -37,7 +37,7 @@ myBook.name === "harry porter" //true
 
 myBook.name = "lover stroy"
 
-myBook.name = 1 // //可以注意此時Book.name已經被ts自動推斷為字串行別，所以此時只能賦予name字串行別的value
+//myBook.name = 1 // //可以注意此時Book.name已經被ts自動推斷為字串行別，所以此時只能賦予name字串行別的value
 
 
 // 4.定義類的時候指定property該是什麼型別
