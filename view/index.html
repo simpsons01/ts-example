@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-item-container {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+      }
+      .swiper-item-container .swiper-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0;
+      }
+      .swiper-item-container .swiper-item.show {
+        opacity:  1;
+      }
+      .swiper-item-container .swiper-item.enter-right,
+      .swiper-item-container .swiper-item.enter-left,
+      .swiper-item-container .swiper-item.leave-right,
+      .swiper-item-container .swiper-item.leave-left {
+        animation-fill-mode: forwards;
+        animation-duration: .3s;
+        animation-timing-function: ease;
+      }
+      .swiper-item-container .swiper-item.enter-right {
+        animation-name: enter-right;
+      }
+      .swiper-item-container .swiper-item.enter-left {
+        animation-name: enter-left;
+      }
+      .swiper-item-container .swiper-item.leave-right {
+        animation-name: leave-right;
+      }
+      .swiper-item-container .swiper-item.leave-left {
+        animation-name: leave-left;
+      }
+      @keyframes enter-right {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+      @keyframes enter-left {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+      @keyframes leave-right {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100%);
+        }
+      }
+      @keyframes leave-left {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="forward">前進</button>
+      <button class="back">後退</button>
+    </div>
+    <div class="swiper">
+      <div class="swiper-item-container">
+      </div>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+      var el = document.querySelector(".swiper")
+      var imageUrl = [
+        { url: "https://picsum.photos/id/239/500/300" },
+        { url: "https://picsum.photos/id/238/500/300" },
+        { url: "https://picsum.photos/id/240/500/300" }
+      ]
+      var swiper = new Swiper({
+        el: el,
+        imagesList: imageUrl
+      }) 
+      document.querySelector(".forward").addEventListener("click", function() {
+        swiper.updateCurrentPage(swiper.currentPage + 1)
+      })
+      document.querySelector(".back").addEventListener("click", function() {
+        swiper.updateCurrentPage(swiper.currentPage - 1)
+      })
+    </script>
+   
+  </body>
+</html>

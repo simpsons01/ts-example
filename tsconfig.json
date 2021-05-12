@@ -9,6 +9,6 @@
     "outDir": "dist",
     "module": "amd"
   },
-  "include": ["src/**/*"],
+  "include": ["src/4_example/*"],
   "exclude": ["dist"]
 }
