@@ -1,19 +1,16 @@
-// 1. 不同類別但是擁有相同屬性，在ts中是合法的
-class Animal {
-  name: string;
-  constructor(theName: string) { this.name = theName; }
+// 1. protected vs private只差在於可不可以再子類中取得
+class dummyBase {
+  private dummmyPrivateProperty: number = 1
+  protected dummmyProtectedProperty: number = 2
 }
 
-class Employee {
-  name: string;
-  constructor(theName: string) { this.name = theName; }
+class dummySubBase extends dummyBase {
+  constructor() {
+    super()
+    this.dummmyPrivateProperty
+    this.dummmyProtectedProperty
+  }
 }
-
-let animal = new Animal("Goat");
-let employee = new Employee("Bob");
-
-animal = employee // 居然通過ts檢查，不過專案上應該不會有人這樣搞.....
-
 
 // 2. 使用getter，未使用setter，該屬性會直接被推斷為read-only屬性
 class Account {
