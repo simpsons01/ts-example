@@ -21,18 +21,15 @@ interface  contractB {
   name: string
 }
 
-type useContractAOrB = contractA | contractB
-type useContractAAndB = contractA & contractB
-
-const contractOne: useContractAOrB = {
+const contractOne: contractA | contractB = {
   age: 24
 }
 
-const contractSecond: useContractAOrB = {
+const contractSecond: contractA | contractB = {
   name: "mike"
 }
 
-const contractThird: useContractAAndB = {
+const contractThird: contractA & contractB = {
   age: 15,
   name: "leo"
 }
