@@ -21,12 +21,18 @@ class baseClass {
 }
 
 interface interfaceExtendByClass extends baseClass {
-  
+   dummyMethod(): void
 }
 
 class SubBaseClass extends baseClass implements interfaceExtendByClass  {
-   constructor() {
-     super(false)
+   dummyMethod(): void {
+  
+   }
+}
+
+class NoSunClass implements interfaceExtendByClass {
+   dummyMethod(): void {
+
    }
 }
 
