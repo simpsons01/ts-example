@@ -12,7 +12,7 @@ const customExtendObj: extendInterface = {
   extendProperty: "i am extend property"
 }
 
-// 2. interface可以被class拓展，接下來implements，只能是該類的subClass
+// 2. interface可以被class拓展，接下來implements，只能是該類的subClass，不過使用場景？？？
 class baseClass {
   private priveateProperty: boolean
   constructor(val) {
@@ -30,11 +30,6 @@ class SubBaseClass extends baseClass implements interfaceExtendByClass  {
    }
 }
 
-class NoSubClass implements interfaceExtendByClass  {
-  priveateProperty = true
-}
-
-// 試著把baseClass private屬性改掉會發生什麼事？
 
 
 

@@ -36,6 +36,3 @@ class Account {
 
 const ray = new Account()
 ray.money = 100 // 打開 setter試看看.....
-
-
-
