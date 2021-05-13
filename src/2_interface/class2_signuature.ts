@@ -10,9 +10,15 @@ const myDummyAry: dummyIndexSignuatureObj = {
 
 
 // 2. 需注意的是index signature不能跟後面定義的property打架 
-interface dummyIndexSignuatureWrongObj {
+interface dummyIndexSignuatureWrongObj1 {
   [propName: string]: string
   numberProperty: number
+}
+
+// or
+interface dummyIndexSignuatureWrongObj2 {
+  [x: string]: string
+  [y: number]: number
 }
 
 
