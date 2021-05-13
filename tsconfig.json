@@ -10,5 +10,5 @@
     "module": "amd",
     "lib": ["esnext", "dom"]
   },
-  "include": ["src/test/*"],
+  "include": ["src/test/*", "src/2_interface/index.ts"],
 }
