@@ -9,5 +9,5 @@
     "outDir": "./view/scripts",
     "module": "amd"
   },
-  "include": ["src/4_example/*"],
+  "include": ["src/**/*"],
 }
