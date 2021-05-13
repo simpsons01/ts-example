@@ -7,7 +7,8 @@
     "noImplicitThis": true,
     "target": "es5",
     "outDir": "./view/scripts",
-    "module": "amd"
+    "module": "amd",
+    "lib": ["esnext", "dom"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/test/*"],
 }
