@@ -17,7 +17,7 @@ class a {
 interface dummyClass {
   property1: number;
 }
-interface dummyConstructorInterface {
+interface dummyConstructor {
   new (property1: number): dummyClass;
 }
 
@@ -28,7 +28,7 @@ class dummyA implements dummyClass {
   }
 }
 
-function createDummy(dummy: dummyConstructorInterface, num): dummyClass {
+function createDummy(dummy: dummyConstructor, num): dummyClass {
   return new dummy(num);
 }
 
