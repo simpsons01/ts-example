@@ -1,4 +1,8 @@
-// static property vs instance property
+// 1. static property vs instance property
+// 以a類別來說，constructor, d, e被ts歸類在static property, b, c被歸類在實體屬性
+// 參考1： https://stackoverflow.com/questions/58399613/what-is-exactly-the-static-side-and-the-instance-side-in-typescript
+// 參考2： https://stackoverflow.com/questions/13407036/how-does-interfaces-with-construct-signatures-work
+
 class a {
   b: number;
   constructor(arg: number) {
@@ -9,11 +13,7 @@ class a {
   static e = 3;
 }
 
-// 以a類別來說，constructor, d, e被ts歸類在static property, b, c被歸類在實體屬性
-//參考： https://stackoverflow.com/questions/58399613/what-is-exactly-the-static-side-and-the-instance-side-in-typescript
-// https://stackoverflow.com/questions/13407036/how-does-interfaces-with-construct-signatures-work
-
-// construct signature 範例
+// 2. construct signature 範例
 interface dummyClass {
   property1: number;
 }
