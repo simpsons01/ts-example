@@ -13,7 +13,7 @@ class a {
 //參考： https://stackoverflow.com/questions/58399613/what-is-exactly-the-static-side-and-the-instance-side-in-typescript
 // https://stackoverflow.com/questions/13407036/how-does-interfaces-with-construct-signatures-work
 
-//
+// construct signature 範例
 interface dummyClass {
   property1: number;
 }
