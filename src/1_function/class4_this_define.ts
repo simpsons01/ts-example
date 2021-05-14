@@ -30,3 +30,11 @@ class a1 {
     }
   }
 }
+
+// const b = new a1()
+// const c = {
+//   b: 2,
+//   c: b.c()
+// }
+
+// c.c()
