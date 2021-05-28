@@ -27,7 +27,7 @@ class Computer extends Machine {
 
 const amdComputer: Computer = new Computer("amd")
 
-const intelComputer: Machine = new Computer("intel")  // 通過ts檢查，因為Computer是Machine的子類(subClass)
+const intelComputer: Machine = new Computer("intel") 
 
 
 // 2. 子類別可以複寫父類別方法，但必須遵守父類別的合約(contract)
