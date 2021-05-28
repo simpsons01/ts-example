@@ -8,7 +8,7 @@ class Machine {
       this.state = "on"
     }
   }
-  bootsUp() {
+  bootsUp(): void {
     this.state = "on"
   }
   powerOff() {

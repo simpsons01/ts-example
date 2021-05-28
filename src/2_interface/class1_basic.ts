@@ -7,7 +7,7 @@ interface dummyInterface {
 const myDummyInterface: dummyInterface = {
   property1: "hello",
   method1() {
-    return "hello world"
+    return "2"
   }
 }
 
@@ -35,6 +35,4 @@ class myDummyClass implements dummyClass {
   method1() {
     return this.propery1
   }
-  //private privateProperty: string //試著打開看看，ts是否報錯
-  //public property2: string //試著打開看看，ts是否報錯
 }

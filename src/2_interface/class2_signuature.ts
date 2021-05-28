@@ -10,16 +10,25 @@ const myDummyAry: dummyIndexSignuatureObj = {
 
 
 // 2. 需注意的是index signature不能跟後面定義的property打架 
+
+//example 1
+interface Dog {
+  bark(): void
+}
+
+interface Cat {
+  meow(): void
+}
+
+interface NotOkay {
+  [x: string]: Cat
+  [x: number]: Dog
+}
+
+//example 2
 interface dummyIndexSignuatureWrongObj1 {
   [propName: string]: string
   numberProperty: number
 }
-
-// or
-interface dummyIndexSignuatureWrongObj2 {
-  [x: string]: string
-  [y: number]: number
-}
-
 
 

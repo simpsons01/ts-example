@@ -27,11 +27,11 @@ class dummyReadOnlyErrorExample {
 class Account {
   _money: number = 0
   get money() {
-    return this.money
+    return this._money
   }
-  // set money(number) {
-  //   this._money = number
-  // }
+  set money(number) {
+    this._money = number
+  }
 }
 
 const ray = new Account()

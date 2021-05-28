@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "noImplicitAny": false,
     "noEmitOnError": true,
     "removeComments": false,
     "sourceMap": true,
     "noImplicitThis": true,
+    "strictNullChecks": true,
     "target": "es5",
     "outDir": "./view/scripts",
     "module": "amd",
     "lib": ["esnext", "dom"]
   },
-  "include": ["src/**/*", "src/2_interface/index.ts"],
+  "include": ["src/**/*"],
 }

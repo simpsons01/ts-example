@@ -1,13 +1,13 @@
 // 1.需要宣告class擁有哪些property，才能在建構函數裡賦值
-class Human {
-  constructor(gender, name) {
+class Human1 {
+  constructor(gender: string, name: string) {
     this.name = name
   }
 } //錯誤
 
-class Human {
+class Human2 {
   name
-  constructor(gender, name) {
+  constructor(gender: string, name: string) {
     this.name = name
   }
 } //正確
@@ -15,7 +15,7 @@ class Human {
 
 // 2.不在一開始就定義classk的property是哪些型別，默認型別為any
 class Count {
-  num 
+  num
   constructor(num) {
     this.num = num
   }
@@ -43,7 +43,7 @@ myBook.name = "lover stroy"
 // 4.定義類的時候指定property該是什麼型別
 class Car {
   brand: string
-  constructor(brand) {
+  constructor(brand: string) {
     this.brand = brand
   }
 }

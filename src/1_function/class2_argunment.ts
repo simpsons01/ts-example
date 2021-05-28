@@ -5,4 +5,4 @@ const sayHello = function(str: string, ...args) {
   console.log("hello" + str)
 }
 
-sayHello("ray", 1, {}, ()=>{}, [])
+sayHello("ray", 2, 3, 4, () => {}, {}, false)

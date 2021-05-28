@@ -34,30 +34,6 @@ const contractThird: contractA & contractB = {
   name: "leo"
 }
 
-// 3. interface可以被class拓展，接下來implements，只能是該類的subClass，不過使用場景？？？
-class baseClass {
-  private priveateProperty: boolean
-  constructor(val) {
-    this.priveateProperty = val
-  }
-}
-
-interface interfaceExtendByClass extends baseClass {
-   dummyMethod(): void
-}
-
-class SubBaseClass extends baseClass implements interfaceExtendByClass  {
-   dummyMethod(): void {
-  
-   }
-}
-
-class NoSunClass implements interfaceExtendByClass {
-   dummyMethod(): void {
-
-   }
-}
-
 
 
 
